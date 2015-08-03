@@ -2,12 +2,8 @@
     <h3><?= __('Actions') ?></h3>
     <ul class="side-nav">
         <li><?= $this->Html->link(__('New User'), ['action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Apps'), ['controller' => 'Apps', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New App'), ['controller' => 'Apps', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Bookmarks'), ['controller' => 'Bookmarks', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Bookmark'), ['controller' => 'Bookmarks', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Profiles'), ['controller' => 'Profiles', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Profile'), ['controller' => 'Profiles', 'action' => 'add']) ?></li>
     </ul>
 </div>
 <div class="users index large-10 medium-9 columns">
@@ -29,7 +25,6 @@
             <td><?= $this->Number->format($user->id) ?></td>
             <td><?= h($user->email) ?></td>
             <td><?= h($user->password) ?></td>
-            <td><?= h($user->dob) ?></td>
             <td><?= h($user->created) ?></td>
             <td><?= h($user->updated) ?></td>
             <td class="actions">
