@@ -50,11 +50,17 @@ class AppController extends Controller
             'loginAction' => [
                 'controller' => 'Users',
                 'action' => 'login'
-            ]
+            ],
+            'authorize' => 'Controller',
         ]);
 
         // Allow the display action so our pages controller
         // continues to work.
         $this->Auth->allow(['display']);
+    }
+
+    public function isAuthorized($user)
+    {
+        return false;
     }
 }
