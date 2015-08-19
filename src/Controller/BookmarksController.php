@@ -74,7 +74,7 @@ class BookmarksController extends AppController
      */
     public function edit($id = null)
     {
-    $bookmark = $this->Bookmarks->get($id, [
+        $bookmark = $this->Bookmarks->get($id, [
             'contain' => ['Tags']
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
