@@ -86,6 +86,9 @@ class BookmarksTable extends Table
         return $this->find()
             ->distinct(['Bookmarks.id'])
             ->matching('Tags', function ($q) use ($options) {
+                if (empty($options['tags'])) {
+                    return $q->where(['Tags.title IS' => null]);
+                }
                 return $q->where(['Tags.title IN' => $options['tags']]);
             });
     }
