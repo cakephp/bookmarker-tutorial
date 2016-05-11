@@ -6,7 +6,7 @@ the [bookmarker tutorial](http://book.cakephp.org/3.0/en/quickstart.html).
 # Installation & Setup
 
 1. Download [Composer](http://getcomposer.org/doc/00-intro.md) or update `composer self-update`.
-2. Download this repository - `git clone git://github.com/cakephp/bookmarker-sample-app`
+2. Download this repository - `git clone git@github.com:cakephp/bookmarker-tutorial`
 3. Install dependencies with composer - `composer install`.
 4. Add the schema to a new database.
 5. Configure your database credentials in ``app.php``. Make sure to use the same database name as in step 4.
