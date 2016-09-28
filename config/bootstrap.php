@@ -179,7 +179,6 @@ Request::addDetector('tablet', function ($request) {
  * Plugin::load('Migrations'); //Loads a single plugin named Migrations
  *
  */
-
 Plugin::load('Migrations');
 
 // Only try to load DebugKit in development mode
@@ -187,13 +186,6 @@ Plugin::load('Migrations');
 if (Configure::read('debug')) {
     Plugin::load('DebugKit', ['bootstrap' => true]);
 }
-
-/**
- * Connect middleware/dispatcher filters.
- */
-DispatcherFactory::add('Asset');
-DispatcherFactory::add('Routing');
-DispatcherFactory::add('ControllerFactory');
 
 /**
  * Enable default locale format parsing.
