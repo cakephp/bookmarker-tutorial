@@ -1,0 +1,25 @@
+---
+server:
+    install: '1'
+    timezone: UTC
+    locale: en_US.UTF-8
+vagrant_local:
+    install: '1'
+    vm: { base_box: trusty64, hostname: default, ip: 192.168.33.99, memory: '512', sharedfolder: ./, useVagrantCloud: '1', syncType: nfs }
+apache:
+    install: '1'
+    docroot: /vagrant
+    servername: bookmarker
+mysql:
+    install: '1'
+    root_password: ''
+    database: my_app
+    user: my_app
+    password: secret
+    dump: ''
+php:
+    install: '1'
+    ppa: php5-5.6
+    packages: [php5-cli, php5-intl, php5-mcrypt, php5-mysql]
+composer:
+    install: '1'
