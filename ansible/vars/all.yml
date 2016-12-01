@@ -16,7 +16,7 @@ mysql:
     database: my_app
     user: my_app
     password: secret
-    dump: ''
+    dump: 'config/schema/app.sql'
 php:
     install: '1'
     ppa: php
