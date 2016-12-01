@@ -20,6 +20,9 @@ mysql:
 php:
     install: '1'
     ppa: php
-    packages: [php5.6-cli, php5.6-intl, php5.6-mcrypt, php5.6-mysql]
+    packages: [php5.6-cli, php5.6-intl, php5.6-mcrypt, php5.6-mysql, php5.6-mbstring]
 composer:
     install: '1'
+app:
+  salt: f554f132cf42fb542d5d54489dd97d82c36e788d9d025fdb4ca6877802b4e1a2
+

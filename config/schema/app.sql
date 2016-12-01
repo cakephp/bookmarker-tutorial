@@ -1,3 +1,9 @@
+-- Reset state
+DROP TABLE IF EXISTS bookmarks_tags;
+DROP TABLE IF EXISTS bookmarks;
+DROP TABLE IF EXISTS tags;
+DROP TABLE IF EXISTS users;
+
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     email VARCHAR(255) NOT NULL,
@@ -32,7 +38,6 @@ CREATE TABLE bookmarks_tags (
     FOREIGN KEY tag_key(tag_id) REFERENCES tags(id),
     FOREIGN KEY bookmark_key(bookmark_id) REFERENCES bookmarks(id)
 );
-
 
 -- Insert Sample Data
 INSERT INTO `users` VALUES (1,'user@example.com','$2y$10$mC71iGlr.MzYoueQDoOmcOHIq3621JHfUhLy.jT2fvH2fx.6ACwou','2016-12-01 03:10:35','2016-12-01 03:10:35');

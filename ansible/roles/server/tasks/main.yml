@@ -10,6 +10,7 @@
     - curl
     - wget
     - python-software-properties
+    - zip
 
 - name: Install Extra Packages
   sudo: yes
