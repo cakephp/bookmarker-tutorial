@@ -24,3 +24,4 @@
   shell: php5enmod {{ item }}
   with_items: php.pecl_packages
   when: php.pecl_packages is defined
+  notify: restart apache

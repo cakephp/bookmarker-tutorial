@@ -20,6 +20,7 @@
   apt: pkg={{ item }} state=latest
   with_items: php.packages
   when: php.packages is defined
+  notify: restart apache
 
 - include: configure.yml
 - include: pecl.yml
