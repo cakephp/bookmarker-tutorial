@@ -1,0 +1,12 @@
+---
+- name: Create web app config file.
+  template:
+  args:
+    src: app.php.tpl
+    dest: "/vagrant/config/app.php"
+
+- name: Install composer dependencies
+  command: "composer install --no-interactive"
+  args:
+    creates: "/vagrant/vendor/autoload.php"
+    chdir: "/vagrant"

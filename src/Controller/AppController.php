@@ -51,6 +51,10 @@ class AppController extends Controller
                 'controller' => 'Users',
                 'action' => 'login'
             ],
+            'loginRedirect' => [
+                'controller' => 'Bookmarks',
+                'action' => 'index',
+            ],
             'authorize' => 'Controller',
         ]);
 
